@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates>
+    <t t-name="owl_framework.ResPartnerFormView" t-inherit="web.FormView" owl="1">
+        <xpath expr="//button[hasclass('o_form_button_create')]" position="after">
+            <button class="btn btn-primary" t-on-click="()=>this.openWebsite(model.root.data.website)">Go to Website</button>           
+            <button class="btn btn-primary ms-2" t-on-click="openSalesView">View Sales Orders</button>
+            <button class="btn btn-secondary border ms-2">View Invoices</button>
+            <button class="btn btn-success ms-2">View Meetings</button>
+            <button class="btn ms-2">Refresh</button>
+        </xpath>
+    </t>
+</templates>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="owl_framework.ExternalLibraries" owl="1">
+        <div class="row px-5 vh-100 overflow-y-auto">
+            <div class="col-lg-6 p-5">
+                <div class="h1 mb-3">
+                    International Telephone Input
+                </div>
+                <div class="mb-3">
+                    <lable class="form-lable me-2">
+                        Phone
+                    </lable>
+                    <input class="form-control" type="tel" t-ref="phone" />
+                </div>
+
+                <div t-if="state.phoneValid === false" class="alert alert-danger">
+                    Phone Number is not Valid!
+                </div>
+
+                <div t-if="state.phoneValid === true" class="alert alert-success">
+                    Phone Number is Valid!
+                </div>
+
+                <button class="btn btn-primary" t-on-click="validate" >Validate</button>
+            </div>
+            <div class="col-lg-6 p-5">
+                <div class="h1 mb-3">
+                    FilePond
+                </div>
+                <div class="mb-3">
+                    <lable class="form-lable me-2">
+                        Upload Files
+                    </lable>
+                    <input class="form-control" type="file" t-ref="file" />
+                </div>
+            </div>
+        </div>
+    </t>
+    
+</templates>
