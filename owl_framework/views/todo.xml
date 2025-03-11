@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_todo_list" model="ir.actions.act_window">
+        <field name="name">Todo List</field>
+        <field name="res_model">owl.todo.list</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+        <field name="domain">[('completed', '=', 1)]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new Todo List
+            </p>
+        </field>
+    </record>
+
+    <menuitem
+        id="menu_todo"
+        name="Todo"
+        parent="menu_owl_todo_list"
+        action="action_todo_list"
+        sequence="20"/>
+
+
+</odoo>
